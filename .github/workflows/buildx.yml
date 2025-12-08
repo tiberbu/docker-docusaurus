@@ -6,6 +6,8 @@ on:
 jobs:
   buildx:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -55,4 +57,3 @@ jobs:
           tags: |
             ${{ secrets.ECR_REPOSITORY_URI }}:${{ steps.version.outputs.version }}
           push: true
-          
