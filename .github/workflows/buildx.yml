@@ -30,7 +30,7 @@ jobs:
       - name: Generate version
         id: version
         run: |
-          PREV_VERSION=$(git describe --tags --abbrev=0 2>/dev/null)
+          PREV_VERSION=$(git describe --tags --abbrev=0 2>/dev/null || echo "0.0.0")
           MAJOR=$(echo $PREV_VERSION | cut -d. -f1)
           MINOR=$(echo $PREV_VERSION | cut -d. -f2)
           PATCH=$(echo $PREV_VERSION | cut -d. -f3)
