@@ -1,6 +1,5 @@
 FROM node:20-alpine3.17
-LABEL maintainer="Deokgyu Yang <secugyu@gmail.com>" \
-      description="Lightweight Docusaurus container with Node.js based on Alpine Linux"
+LABEL description="Lightweight Docusaurus container with Node.js based on Alpine Linux"
 
 RUN apk add --no-cache \
     bash bash-completion supervisor \
